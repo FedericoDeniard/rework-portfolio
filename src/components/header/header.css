@@ -17,6 +17,9 @@
 .header-title {
     width: fit-content;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .header-title .hide {

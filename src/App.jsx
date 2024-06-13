@@ -41,7 +41,7 @@ function App() {
         // region skills
       }
       <div className="skills" ref={skillsRef}>
-        <h2>Skills</h2>
+        <h2>Habilidades</h2>
         <div className="skills-container">
           <TechCards imgSrc={pythonSvg} language="Python" />
           <TechCards imgSrc={jsSvg} language="JavaScript" />
