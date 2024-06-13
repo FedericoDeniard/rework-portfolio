@@ -29,11 +29,8 @@ export const CircleButton = ({ imgSource }) => {
   }, [isRotating]);
 
   return (
-    <div className="circle-button">
-      <div
-        className={`circle-button ${isRotating ? "rotate" : ""}`}
-        onMouseOver={rotateClass}
-      >
+    <div className={`circle-button ${isRotating ? "rotate" : ""}`}>
+      <div className={`circle-button_inner`} onMouseOver={rotateClass}>
         {imageExists()}
       </div>
     </div>
