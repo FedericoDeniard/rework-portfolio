@@ -12,7 +12,7 @@ export const Header = () => {
         <h4 className="header-title">Federico Deniard</h4>
         <div className="header-info">
           <TextButton text="Inicio" destiny={""} />
-          <TextButton text="Sobre mí" destiny={""} />
+          <TextButton text="Proyectos" destiny={""} />
           <TextButton text="Habilidades" destiny={""} />
           <TextButton text="Contacto" destiny={""} />
         </div>
@@ -32,7 +32,7 @@ export const Header = () => {
             />
             <TextButton
               className="header-info_mobile-menu_option"
-              text="Sobre mí"
+              text="Proyectos"
               destiny={""}
             />
             <TextButton
