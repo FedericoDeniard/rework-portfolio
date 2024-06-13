@@ -1,0 +1,11 @@
+.textbutton {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: 600;
+}
+
+.textbutton:hover {
+    color: lightskyblue;
+    text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+.header {
+    min-width: 100%;
+    background-color: lightgray;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
