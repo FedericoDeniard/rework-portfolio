@@ -5,11 +5,19 @@ import { useState } from "react";
 
 export const Header = ({ skillRef, homeRef }) => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [mouseOnTitle, setMouseOnTitle] = useState(false);
 
   return (
     <>
       <header className="header">
-        <h4 className="header-title">Federico Deniard</h4>
+        <h4
+          className="header-title"
+          onMouseOver={() => setMouseOnTitle(true)}
+          onMouseLeave={() => setMouseOnTitle(false)}
+        >
+          <p className={mouseOnTitle ? "hide" : "show"}>Federico Deniard</p>
+          <p className={mouseOnTitle ? "show" : "hide"}>FullStack Developer</p>
+        </h4>
         <div className="header-info">
           <TextButton text="Inicio" destinyRef={homeRef} />
           <TextButton text="Proyectos" destinyRef={""} />
