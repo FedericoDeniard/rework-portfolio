@@ -3,7 +3,7 @@ import { TextButton } from "../textButton/TextButton";
 import menu from "../../assets/menu.svg";
 import { useState } from "react";
 
-export const Header = () => {
+export const Header = ({ skillRef, homeRef }) => {
   const [menuOpened, setMenuOpened] = useState(false);
 
   return (
@@ -11,10 +11,10 @@ export const Header = () => {
       <header className="header">
         <h4 className="header-title">Federico Deniard</h4>
         <div className="header-info">
-          <TextButton text="Inicio" destiny={""} />
-          <TextButton text="Proyectos" destiny={""} />
-          <TextButton text="Habilidades" destiny={""} />
-          <TextButton text="Contacto" destiny={""} />
+          <TextButton text="Inicio" destinyRef={homeRef} />
+          <TextButton text="Proyectos" destinyRef={""} />
+          <TextButton text="Habilidades" destinyRef={skillRef} />
+          <TextButton text="Contacto" destinyRef={""} />
         </div>
         <div className="header-info_mobile">
           <img
@@ -28,22 +28,22 @@ export const Header = () => {
             <TextButton
               className="header-info_mobile-menu_option"
               text="Inicio"
-              destiny={""}
+              destinyRef={homeRef}
             />
             <TextButton
               className="header-info_mobile-menu_option"
               text="Proyectos"
-              destiny={""}
+              destinyRef={""}
             />
             <TextButton
               className="header-info_mobile-menu_option"
               text="Habilidades"
-              destiny={""}
+              destinyRef={skillRef}
             />
             <TextButton
               className="header-info_mobile-menu_option"
               text="Contacto"
-              destiny={""}
+              destinyRef={""}
             />
           </div>
         </div>

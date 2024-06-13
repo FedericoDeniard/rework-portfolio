@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Header } from "./components/header/Header";
 import { CircleButton } from "./components/circleButton/CircleButton";
 import "./App.css";
@@ -15,13 +15,16 @@ import gitSvg from "./assets/techs/git.svg";
 import { TechCards } from "./components/techCards/TechCards";
 
 function App() {
+  const homeRef = useRef(null);
+  const skillsRef = useRef(null);
+
   return (
     <>
-      <Header />
+      <Header skillRef={skillsRef} homeRef={homeRef} />
       {
         // region Home
       }
-      <div className="home">
+      <div className="home" ref={homeRef}>
         <div className="home-title">
           <h2 className="home-title_name">Federico Deniard</h2>
           <h4 className="home-title_dev">Fullstack Developer</h4>
@@ -37,7 +40,7 @@ function App() {
         // endregion
         // region skills
       }
-      <div className="skills">
+      <div className="skills" ref={skillsRef}>
         <h2>Skills</h2>
         <div className="skills-container">
           <TechCards imgSrc={pythonSvg} language="Python" />
