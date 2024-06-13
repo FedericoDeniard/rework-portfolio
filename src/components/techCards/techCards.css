@@ -1,0 +1,66 @@
+.techCard {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.techCard-container {
+    height: calc((150 / 1080) * 50vh + (150 / 1920) * 50vw);
+    /* Calculamos el tamaño en vh y vw */
+    width: calc((150 / 1080) * 50vh + (150 / 1920) * 50vw);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    background-color: #8191b7;
+}
+
+.techCard-img {
+    height: calc(100% - 50px);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
+}
+
+.techCard-tech {
+    text-align: center;
+    font-weight: 400;
+    font-size: clamp(16px, calc(2vw + 10px), 25px);
+
+}
+
+.techCard-animation {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(.5);
+        transform: scale(1.5);
+    }
+
+    100% {
+        -webkit-transform: scale(.5);
+        transform: scale(1.5);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(.5);
+        transform: scale(1.5);
+    }
+
+    100% {
+        -webkit-transform: scale(.5);
+        transform: scale(1.5);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .techCard-container {
+        height: 100px;
+        width: 100px;
+    }
+}

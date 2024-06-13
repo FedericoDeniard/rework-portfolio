@@ -1,6 +1,7 @@
+/* ======= Home Section ======= */
 .home {
-    min-width: 100vw;
     min-height: 100vh;
+    height: fit-content;
     background: rgb(238, 174, 202);
     background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     padding-top: 70px;
@@ -10,8 +11,21 @@
     align-items: center;
 }
 
+/* .home::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 4vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23FFF5EE'/></svg>");
+} */
+
 .home-title {
-    font-size: clamp(20px, 2.6vw, 80px);
+    font-size: clamp(20px, calc(2vw + 10px), 60px);
     /* Originally was 50px */
 }
 
@@ -21,7 +35,7 @@
 
 .home-title_description {
     max-width: 800px;
-    font-size: clamp(20px, 2.083vw, 60px);
+    font-size: clamp(20px, calc(1.5vw + 10px), 40px);
     /* Originally was 40px */
     color: #414142;
 }
@@ -38,5 +52,52 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+}
+
+/* ======= Skills Section ======= */
+
+.skills {
+    /* Header's height + 10px */
+    height: fit-content;
+    min-height: 100vh;
+    max-height: fit-content;
+    background: rgb(148, 186, 232);
+    background: linear-gradient(90deg, rgba(148, 186, 232, 1) 0%, rgba(237, 174, 202, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 100px 30px;
+    font-size: clamp(20px, calc(2vw + 10px), 60px);
+    /* Originally was 50px */
+    justify-content: space-around;
+}
+
+.skills::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 4vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23FFF5EE'/></svg>");
+    transform: rotate(180deg);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+    .skills {
+        padding: 0px 30px;
     }
 }

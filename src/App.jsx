@@ -4,6 +4,15 @@ import { CircleButton } from "./components/circleButton/CircleButton";
 import "./App.css";
 
 import yoImg from "./assets/yo.png";
+import pythonSvg from "./assets/techs/python.svg";
+import cssSvg from "./assets/techs/css.svg";
+import flaskSvg from "./assets/techs/flask.svg";
+import htmlSvg from "./assets/techs/html.svg";
+import jsSvg from "./assets/techs/javascript.svg";
+import reactSvg from "./assets/techs/react.svg";
+import gitSvg from "./assets/techs/git.svg";
+
+import { TechCards } from "./components/techCards/TechCards";
 
 function App() {
   return (
@@ -28,7 +37,18 @@ function App() {
         // endregion
         // region skills
       }
-      <div className=""></div>
+      <div className="skills">
+        <h2>Skills</h2>
+        <div className="skills-container">
+          <TechCards imgSrc={pythonSvg} language="Python" />
+          <TechCards imgSrc={jsSvg} language="JavaScript" />
+          <TechCards imgSrc={reactSvg} language="React" />
+          <TechCards imgSrc={flaskSvg} language="Flask" />
+          <TechCards imgSrc={htmlSvg} language="Html" />
+          <TechCards imgSrc={cssSvg} language="Css" />
+          <TechCards imgSrc={gitSvg} language="Git" />
+        </div>
+      </div>
     </>
   );
 }

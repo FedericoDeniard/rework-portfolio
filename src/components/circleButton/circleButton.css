@@ -1,7 +1,9 @@
 .circle-button {
-    background-color: lightcoral;
-    height: 500px;
-    width: 500px;
+    background-color: #cdb2d7;
+    height: calc((500 / 1080) * 50vh + (500 / 1920) * 50vw);
+    /* Calculamos el tamaño en vh y vw */
+    width: calc((500 / 1080) * 50vh + (500 / 1920) * 50vw);
+    ;
     border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
     display: flex;
     justify-content: center;
@@ -17,14 +19,14 @@
 .circle-button_inner {
     box-shadow: 2px 2px 10px #000;
     background-color: lightgray;
-    height: 450px;
-    width: 450px;
+    height: calc(100% - 50px);
+    width: calc(100% - 50px);
     border-radius: inherit;
 }
 
 .circle-button_inner-img {
-    height: inherit;
-    width: inherit;
+    height: 100%;
+    width: 100%;
     border-radius: inherit;
     object-fit: cover;
 }
@@ -59,8 +61,4 @@
         width: 300px;
     }
 
-    .circle-button_inner {
-        height: 250px;
-        width: 250px;
-    }
 }
