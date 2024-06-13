@@ -17,6 +17,14 @@
     background-color: #8191b7;
 }
 
+.techCard-circle {
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+}
+
 .techCard-img {
     height: calc(100% - 50px);
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .8));
