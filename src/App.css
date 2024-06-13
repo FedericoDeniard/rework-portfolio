@@ -38,6 +38,7 @@
     font-size: clamp(20px, calc(1.5vw + 10px), 40px);
     /* Originally was 40px */
     color: #414142;
+    text-wrap: pretty;
 }
 
 

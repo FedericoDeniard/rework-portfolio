@@ -29,9 +29,8 @@ function App() {
           <h2 className="home-title_name">Federico Deniard</h2>
           <h4 className="home-title_dev">Fullstack Developer</h4>
           <p className="home-title_description">
-            Desarrollador fullstack apasionado y autodidacta, con experiencia en
-            proyectos desafiantes como Chordoku. En constante búsqueda de
-            conocimiento
+            Hola! Soy Federico Deniard, estudiante de programación y
+            desarrollador fullstack con stack en Python y JavaScript.
           </p>
         </div>
         <CircleButton imgSource={yoImg} />
