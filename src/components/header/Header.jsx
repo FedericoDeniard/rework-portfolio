@@ -20,8 +20,8 @@ export const Header = ({ skillRef, homeRef, projectsRef }) => {
         </h4>
         <div className="header-info">
           <TextButton text="Inicio" destinyRef={homeRef} />
-          <TextButton text="Proyectos" destinyRef={projectsRef} />
           <TextButton text="Habilidades" destinyRef={skillRef} />
+          <TextButton text="Proyectos" destinyRef={projectsRef} />
           <TextButton text="Contacto" destinyRef={""} />
         </div>
         <div className="header-info_mobile">
@@ -40,13 +40,13 @@ export const Header = ({ skillRef, homeRef, projectsRef }) => {
             />
             <TextButton
               className="header-info_mobile-menu_option"
-              text="Proyectos"
-              destinyRef={projectsRef}
+              text="Habilidades"
+              destinyRef={skillRef}
             />
             <TextButton
               className="header-info_mobile-menu_option"
-              text="Habilidades"
-              destinyRef={skillRef}
+              text="Proyectos"
+              destinyRef={projectsRef}
             />
             <TextButton
               className="header-info_mobile-menu_option"
