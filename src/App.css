@@ -49,6 +49,7 @@
 @media only screen and (max-width: 768px) {
     .home {
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .home-title {
@@ -122,6 +123,7 @@
 @media only screen and (max-width: 768px) {
     .skills {
         padding: 0px 30px;
+        justify-content: space-evenly;
     }
 }
 
