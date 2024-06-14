@@ -31,7 +31,7 @@
 
 .project-inner h4 {
     text-align: center;
-    font-size: clamp(10px, calc(1.5vw + 10px), 40px);
+    font-size: clamp(25px, calc(1.5vw + 10px), 30px);
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -39,6 +39,6 @@
 
 @media only screen and (max-width: 768px) {
     .project-inner h4 {
-        font-size: clamp(25px, calc(1.5vw + 10px), 40px);
+        font-size: clamp(25px, calc(1.5vw + 10px), 30px);
     }
 }
