@@ -13,7 +13,10 @@ import jsSvg from "./assets/techs/javascript.svg";
 import reactSvg from "./assets/techs/react.svg";
 import gitSvg from "./assets/techs/git.svg";
 
+import chordokuImg from "./assets/projects/chordoku.png";
+
 import { TechCards } from "./components/techCards/TechCards";
+import { Project } from "./components/project/project";
 //endregion
 
 function App() {
@@ -23,7 +26,11 @@ function App() {
 
   return (
     <>
-      <Header skillRef={skillsRef} homeRef={homeRef} />
+      <Header
+        skillRef={skillsRef}
+        homeRef={homeRef}
+        projectsRef={projectsRef}
+      />
       {
         // region Home
       }
@@ -58,7 +65,16 @@ function App() {
         // endregion
         // region Projects
       }
-      <div className="projects" ref={projectsRef}></div>
+      <div className="projects" ref={projectsRef}>
+        <h2 className="projects-title">Proyectos</h2>
+        <div className="projects-container">
+          <Project
+            projectName="Chordoku"
+            imgSrc={chordokuImg}
+            link="https://www.chordoku.com.ar/"
+          />
+        </div>
+      </div>
     </>
   );
 }
