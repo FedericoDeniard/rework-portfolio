@@ -1,3 +1,4 @@
+// region Imports
 import { useState, useRef } from "react";
 import { Header } from "./components/header/Header";
 import { CircleButton } from "./components/circleButton/CircleButton";
@@ -13,10 +14,12 @@ import reactSvg from "./assets/techs/react.svg";
 import gitSvg from "./assets/techs/git.svg";
 
 import { TechCards } from "./components/techCards/TechCards";
+//endregion
 
 function App() {
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
 
   return (
     <>
@@ -37,7 +40,7 @@ function App() {
       </div>
       {
         // endregion
-        // region skills
+        // region Skills
       }
       <div className="skills" ref={skillsRef}>
         <h2>Habilidades</h2>
@@ -51,6 +54,11 @@ function App() {
           <TechCards imgSrc={gitSvg} language="Git" />
         </div>
       </div>
+      {
+        // endregion
+        // region Projects
+      }
+      <div className="projects" ref={projectsRef}></div>
     </>
   );
 }
