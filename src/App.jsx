@@ -14,6 +14,7 @@ import reactSvg from "./assets/techs/react.svg";
 import gitSvg from "./assets/techs/git.svg";
 
 import chordokuImg from "./assets/projects/chordoku.png";
+import ordererImg from "./assets/projects/orderer_pairs.png";
 
 import { TechCards } from "./components/techCards/TechCards";
 import { Project } from "./components/project/project";
@@ -73,6 +74,12 @@ function App() {
             imgSrc={chordokuImg}
             link="https://www.chordoku.com.ar/"
             techs={["React", "JavaScript", "Html", "Css"]}
+          />
+          <Project
+            projectName="API Calculadora Pares"
+            imgSrc={ordererImg}
+            link="https://www.chordoku.com.ar/"
+            techs={["Python", "Flask", "React", "JavaScript", "Html", "Css"]}
           />
         </div>
       </div>
