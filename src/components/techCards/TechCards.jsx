@@ -9,7 +9,6 @@ export const TechCards = ({ imgSrc, language }) => {
       <div className="techCard">
         <div className="techCard-container">
           <div className="techCard-circle"></div>
-
           <img
             className={`techCard-img ${
               techImgOver ? "techCard-animation" : ""

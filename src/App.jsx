@@ -72,6 +72,7 @@ function App() {
             projectName="Chordoku"
             imgSrc={chordokuImg}
             link="https://www.chordoku.com.ar/"
+            techs={["React", "JavaScript", "Html", "Css"]}
           />
         </div>
       </div>
