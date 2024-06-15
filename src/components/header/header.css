@@ -1,6 +1,5 @@
 .header {
     min-width: 100%;
-    background-color: transparent;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -9,9 +8,13 @@
     padding: 10px;
     position: fixed;
     /* border-bottom: 1px solid #000; */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     font-size: 20px;
     z-index: 100;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .header-title {
