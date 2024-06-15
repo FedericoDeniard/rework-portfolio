@@ -78,7 +78,7 @@ function App() {
           <Project
             projectName="API Calculadora Pares"
             imgSrc={ordererImg}
-            link="https://www.chordoku.com.ar/"
+            link="https://federicodeniard.github.io/front-orderer-pairs/"
             techs={["Python", "Flask", "React", "JavaScript", "Html", "Css"]}
           />
         </div>
