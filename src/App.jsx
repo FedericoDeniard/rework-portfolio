@@ -28,6 +28,7 @@ function App() {
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
         skillRef={skillsRef}
         homeRef={homeRef}
         projectsRef={projectsRef}
+        contactRef={contactRef}
       />
       {
         // region Home
@@ -87,7 +89,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="contact">
+      <div className="contact" ref={contactRef}>
         <h2 className="contact-title">Contacto</h2>
         <div className="contact-container">
           <TechCards

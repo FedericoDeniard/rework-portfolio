@@ -3,7 +3,7 @@ import { TextButton } from "../textButton/TextButton";
 import menu from "../../assets/menu.svg";
 import { useState } from "react";
 
-export const Header = ({ skillRef, homeRef, projectsRef }) => {
+export const Header = ({ skillRef, homeRef, projectsRef, contactRef }) => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [mouseOnTitle, setMouseOnTitle] = useState(false);
 
@@ -22,7 +22,7 @@ export const Header = ({ skillRef, homeRef, projectsRef }) => {
           <TextButton text="Inicio" destinyRef={homeRef} />
           <TextButton text="Habilidades" destinyRef={skillRef} />
           <TextButton text="Proyectos" destinyRef={projectsRef} />
-          <TextButton text="Contacto" destinyRef={""} />
+          <TextButton text="Contacto" destinyRef={contactRef} />
         </div>
         <div className="header-info_mobile">
           <img
