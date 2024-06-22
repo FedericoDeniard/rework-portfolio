@@ -13,6 +13,10 @@ import jsSvg from "./assets/techs/javascript.svg";
 import reactSvg from "./assets/techs/react.svg";
 import gitSvg from "./assets/techs/git.svg";
 
+import gmailSvg from "./assets/contact/gmail.svg";
+import linkedinSvg from "./assets/contact/linkedin.svg";
+import githubSvg from "./assets/contact/github.svg";
+
 import chordokuImg from "./assets/projects/chordoku.png";
 import ordererImg from "./assets/projects/orderer_pairs.png";
 
@@ -80,6 +84,26 @@ function App() {
             imgSrc={ordererImg}
             link="https://federicodeniard.github.io/front-orderer-pairs/"
             techs={["Python", "Flask", "React", "JavaScript", "Html", "Css"]}
+          />
+        </div>
+      </div>
+      <div className="contact">
+        <h2 className="contact-title">Contacto</h2>
+        <div className="contact-container">
+          <TechCards
+            imgSrc={linkedinSvg}
+            language="LinkedIn"
+            link="https://www.linkedin.com/in/federicodeniard/"
+          />
+          <TechCards
+            imgSrc={gmailSvg}
+            language="Gmail"
+            link="mailto:fededeniard@gmail.com"
+          />
+          <TechCards
+            imgSrc={githubSvg}
+            language="Github"
+            link="https://github.com/FedericoDeniard"
           />
         </div>
       </div>

@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./techCards.css";
 
-export const TechCards = ({ imgSrc, language }) => {
+export const TechCards = ({ imgSrc, language, link }) => {
   const [techImgOver, setTechImgOver] = useState(false);
 
   return (
     <>
-      <div className="techCard">
+      <a
+        className="techCard"
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <div className="techCard-container">
           <div className="techCard-circle"></div>
           <img
@@ -20,7 +25,7 @@ export const TechCards = ({ imgSrc, language }) => {
           />
         </div>
         <h6 className="techCard-tech">{language}</h6>
-      </div>
+      </a>
     </>
   );
 };
