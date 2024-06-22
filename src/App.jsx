@@ -91,22 +91,31 @@ function App() {
       </div>
       <div className="contact" ref={contactRef}>
         <h2 className="contact-title">Contacto</h2>
-        <div className="contact-container">
-          <TechCards
-            imgSrc={linkedinSvg}
-            language="LinkedIn"
-            link="https://www.linkedin.com/in/federicodeniard/"
-          />
-          <TechCards
-            imgSrc={gmailSvg}
-            language="Gmail"
-            link="mailto:fededeniard@gmail.com"
-          />
-          <TechCards
-            imgSrc={githubSvg}
-            language="Github"
-            link="https://github.com/FedericoDeniard"
-          />
+        <div className="contact-divisions">
+          <div className="contact-text">
+            {" "}
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+            illo, hic explicabo tempora eaque enim similique velit fuga pariatur
+            inventore vitae? Ipsa doloremque repellendus quibusdam iusto
+            perspiciatis autem itaque ullam.
+          </div>
+          <div className="contact-container">
+            <TechCards
+              imgSrc={linkedinSvg}
+              language="LinkedIn"
+              link="https://www.linkedin.com/in/federicodeniard/"
+            />
+            <TechCards
+              imgSrc={gmailSvg}
+              language="Gmail"
+              link="mailto:fededeniard@gmail.com"
+            />
+            <TechCards
+              imgSrc={githubSvg}
+              language="Github"
+              link="https://github.com/FedericoDeniard"
+            />
+          </div>
         </div>
       </div>
     </>
