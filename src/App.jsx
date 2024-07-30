@@ -115,14 +115,10 @@ function App() {
         </div>
       </div>
       <div className="contact" ref={contactRef}>
-        <h2 className="contact-title">Contacto</h2>
+        <h2 className="contact-title">{t("contact.title")}</h2>
         <div className="contact-divisions">
           <div className="contact-text">
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
-            illo, hic explicabo tempora eaque enim similique velit fuga pariatur
-            inventore vitae? Ipsa doloremque repellendus quibusdam iusto
-            perspiciatis autem itaque ullam.
+            <p>{t("contact.message")}</p>
           </div>
           <div className="contact-container">
             <TechCards

@@ -49,6 +49,10 @@ i18n
         },
         cards : {
           "title": "Technologies used",
+        },
+        contact : {
+          "title": "Contact",
+          "message": "I'm always open to new opportunities and collaborations. Feel free to get in touch with me via LinkedIn, Gmail, or GitHub. I look forward to hearing from you soon!",
         }
         }
       },
@@ -75,6 +79,10 @@ i18n
           },
           cards : {
             "title": "Tecnologías usadas",
+          },
+          contact : {
+            "title": "Contacto",
+            "message": "Estoy siempre abierto a nuevas oportunidades y colaboraciones. No dudes en ponerte en contacto conmigo a través de LinkedIn, Gmail o GitHub. ¡Gracias por tu interés!",
           }
         }
       }
