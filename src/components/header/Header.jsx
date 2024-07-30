@@ -3,9 +3,13 @@ import { TextButton } from "../textButton/TextButton";
 import menu from "../../assets/menu.svg";
 import { useState } from "react";
 
+import { useTranslation } from "react-i18next";
+
 export const Header = ({ skillRef, homeRef, projectsRef, contactRef }) => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [mouseOnTitle, setMouseOnTitle] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -16,13 +20,13 @@ export const Header = ({ skillRef, homeRef, projectsRef, contactRef }) => {
           onMouseLeave={() => setMouseOnTitle(false)}
         >
           <p className={mouseOnTitle ? "hide" : "show"}>Federico Deniard</p>
-          <p className={mouseOnTitle ? "show" : "hide"}>FullStack Developer</p>
+          <p className={mouseOnTitle ? "show" : "hide"}>{t("home.dev")}</p>
         </h4>
         <div className="header-info">
-          <TextButton text="Inicio" destinyRef={homeRef} />
-          <TextButton text="Habilidades" destinyRef={skillRef} />
-          <TextButton text="Proyectos" destinyRef={projectsRef} />
-          <TextButton text="Contacto" destinyRef={contactRef} />
+          <TextButton text={t("header.home")} destinyRef={homeRef} />
+          <TextButton text={t("header.skills")} destinyRef={skillRef} />
+          <TextButton text={t("header.projects")} destinyRef={projectsRef} />
+          <TextButton text={t("header.contact")} destinyRef={contactRef} />
         </div>
         <div className="header-info_mobile">
           <img

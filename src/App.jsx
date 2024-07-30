@@ -1,8 +1,10 @@
 // region Imports
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Header } from "./components/header/Header";
 import { CircleButton } from "./components/circleButton/CircleButton";
 import "./App.css";
+
+import { useTranslation } from "react-i18next";
 
 import yoImg from "./assets/yo.png";
 import pythonSvg from "./assets/techs/python.svg";
@@ -28,6 +30,13 @@ import { Project } from "./components/project/project";
 //endregion
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const lang = navigator.language;
+    i18n.changeLanguage(lang);
+  }, []);
+
   const homeRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -47,11 +56,8 @@ function App() {
       <div className="home" ref={homeRef}>
         <div className="home-title">
           <h2 className="home-title_name">Federico Deniard</h2>
-          <h4 className="home-title_dev">Fullstack Developer</h4>
-          <p className="home-title_description">
-            Hola! Soy Federico Deniard, estudiante de programación y
-            desarrollador fullstack con stack en Python y JavaScript.
-          </p>
+          <h4 className="home-title_dev">{t("home.dev")}</h4>
+          <p className="home-title_description">{t("home.description")}</p>
         </div>
         <CircleButton imgSource={yoImg} />
       </div>
@@ -60,7 +66,7 @@ function App() {
         // region Skills
       }
       <div className="skills" ref={skillsRef}>
-        <h2>Habilidades</h2>
+        <h2>{t("skills.title")}</h2>
         <div className="skills-container">
           <TechCards imgSrc={pythonSvg} language="Python" />
           <TechCards imgSrc={typeScriptSvg} language="TypeScript" />
@@ -78,16 +84,16 @@ function App() {
         // region Projects
       }
       <div className="projects" ref={projectsRef}>
-        <h2 className="projects-title">Proyectos</h2>
+        <h2 className="projects-title">{t("projects.title")}</h2>
         <div className="projects-container">
           <Project
-            projectName="Chordoku"
+            projectName={t("projects.chordoku")}
             imgSrc={chordokuImg}
             link="https://www.chordoku.com.ar/"
             techs={["React", "JavaScript", "Html", "Css"]}
           />
           <Project
-            projectName="Memory Game"
+            projectName={t("projects.memory_game")}
             imgSrc={memoryImg}
             link={"https://federicodeniard.github.io/memory_game/"}
             techs={[
@@ -101,7 +107,7 @@ function App() {
             ]}
           />
           <Project
-            projectName="API Calculadora Pares"
+            projectName={t("projects.orderer_pairs")}
             imgSrc={ordererImg}
             link="https://federicodeniard.github.io/front-orderer-pairs/"
             techs={["Python", "Flask", "React", "JavaScript", "Html", "Css"]}

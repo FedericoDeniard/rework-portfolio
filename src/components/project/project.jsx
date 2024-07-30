@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./project.css";
+import { useTranslation } from "react-i18next";
 
 export const Project = ({ imgSrc, projectName, link, techs }) => {
   const [mouseOver, setMouseOver] = useState(false);
+
+  const { t, i18n } = useTranslation();
 
   return (
     <a
@@ -21,7 +24,7 @@ export const Project = ({ imgSrc, projectName, link, techs }) => {
           onMouseOver={() => setMouseOver(true)}
           onMouseOut={() => setMouseOver(false)}
         >
-          <p className="project-description_title">Tecnologías utilizadas</p>
+          <p className="project-description_title">{t("cards.title")}</p>
           <ul className="project-description">
             {techs.map((element, index) => {
               return <li key={index}>- {element}</li>;
