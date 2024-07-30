@@ -91,6 +91,6 @@
 
 @media only screen and (max-width: 768px) {
     .project-inner h4 {
-        font-size: clamp(25px, calc(1.5vw + 10px), 30px);
+        font-size: clamp(11px, 4vw, 30px);
     }
 }
