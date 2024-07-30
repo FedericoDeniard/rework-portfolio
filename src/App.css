@@ -217,6 +217,26 @@
     background-image: url('data:image/svg+xml;charset=utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.28 2.17" preserveAspectRatio="none"><path d="M0 .5c3.07.55 9.27-.42 16.14 0 6.88.4 13.75.57 19.14-.11V0H0z" fill="%23ffffff"/></svg>');
 }
 
+.contact-divisions {
+    display: flex;
+    align-items: center;
+}
+
+.contact-text {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    flex: 1;
+    padding: 5px;
+    font-size: clamp(20px, calc(1.5vw + 10px), 40px);
+    color: #414142;
+    text-wrap: pretty;
+}
+
 .contact-container {
     display: flex;
     justify-content: space-evenly;
@@ -224,4 +244,12 @@
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-divisions {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

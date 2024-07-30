@@ -12,6 +12,8 @@ import htmlSvg from "./assets/techs/html.svg";
 import jsSvg from "./assets/techs/javascript.svg";
 import reactSvg from "./assets/techs/react.svg";
 import gitSvg from "./assets/techs/git.svg";
+import typeScriptSvg from "./assets/techs/typescript.svg";
+import sqlSvg from "./assets/techs/sql.svg";
 
 import gmailSvg from "./assets/contact/gmail.svg";
 import linkedinSvg from "./assets/contact/linkedin.svg";
@@ -19,6 +21,7 @@ import githubSvg from "./assets/contact/github.svg";
 
 import chordokuImg from "./assets/projects/chordoku.png";
 import ordererImg from "./assets/projects/orderer_pairs.png";
+import memoryImg from "./assets/projects/memory_game.png";
 
 import { TechCards } from "./components/techCards/TechCards";
 import { Project } from "./components/project/project";
@@ -60,9 +63,11 @@ function App() {
         <h2>Habilidades</h2>
         <div className="skills-container">
           <TechCards imgSrc={pythonSvg} language="Python" />
+          <TechCards imgSrc={typeScriptSvg} language="TypeScript" />
           <TechCards imgSrc={jsSvg} language="JavaScript" />
           <TechCards imgSrc={reactSvg} language="React" />
           <TechCards imgSrc={flaskSvg} language="Flask" />
+          <TechCards imgSrc={sqlSvg} language="SQL" />
           <TechCards imgSrc={htmlSvg} language="Html" />
           <TechCards imgSrc={cssSvg} language="Css" />
           <TechCards imgSrc={gitSvg} language="Git" />
@@ -82,6 +87,20 @@ function App() {
             techs={["React", "JavaScript", "Html", "Css"]}
           />
           <Project
+            projectName="Memory Game"
+            imgSrc={memoryImg}
+            link={"https://federicodeniard.github.io/memory_game/"}
+            techs={[
+              "React",
+              "TypeScript",
+              "Flask",
+              "Python",
+              "SQL",
+              "Html",
+              "Css",
+            ]}
+          />
+          <Project
             projectName="API Calculadora Pares"
             imgSrc={ordererImg}
             link="https://federicodeniard.github.io/front-orderer-pairs/"
@@ -91,22 +110,31 @@ function App() {
       </div>
       <div className="contact" ref={contactRef}>
         <h2 className="contact-title">Contacto</h2>
-        <div className="contact-container">
-          <TechCards
-            imgSrc={linkedinSvg}
-            language="LinkedIn"
-            link="https://www.linkedin.com/in/federicodeniard/"
-          />
-          <TechCards
-            imgSrc={gmailSvg}
-            language="Gmail"
-            link="mailto:fededeniard@gmail.com"
-          />
-          <TechCards
-            imgSrc={githubSvg}
-            language="Github"
-            link="https://github.com/FedericoDeniard"
-          />
+        <div className="contact-divisions">
+          <div className="contact-text">
+            {" "}
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta
+            illo, hic explicabo tempora eaque enim similique velit fuga pariatur
+            inventore vitae? Ipsa doloremque repellendus quibusdam iusto
+            perspiciatis autem itaque ullam.
+          </div>
+          <div className="contact-container">
+            <TechCards
+              imgSrc={linkedinSvg}
+              language="LinkedIn"
+              link="https://www.linkedin.com/in/federicodeniard/"
+            />
+            <TechCards
+              imgSrc={gmailSvg}
+              language="Gmail"
+              link="mailto:fededeniard@gmail.com"
+            />
+            <TechCards
+              imgSrc={githubSvg}
+              language="Github"
+              link="https://github.com/FedericoDeniard"
+            />
+          </div>
         </div>
       </div>
     </>
